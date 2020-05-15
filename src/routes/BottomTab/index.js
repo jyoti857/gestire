@@ -15,7 +15,11 @@ const BottomTab = (props) => {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeStack} />
+        <Tab.Screen name="Home" component={HomeStack}
+          // options={{
+            
+          // }}
+        />
         <Tab.Screen name="Categories" component={CategoriesScreen} />
         <Tab.Screen name="Search" component={SearchScreen} />
         <Tab.Screen name="Offers" component={OffersScreen} />
