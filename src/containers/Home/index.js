@@ -3,7 +3,10 @@ import React, {useState} from 'react';
 import {View, Text, StatusBar, TextInput, StyleSheet} from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome5';
 import {Card} from 'react-native-paper';
-
+import FirstCard from './components/FirstCard';
+import SecondCard from './components/SecondCard';
+import ThirdCard from './components/ThirdCard';
+import FourthCard from './components/FourthCard';
 
 const nature1 = require('gestire/src/assets/images/nature1.png');
 const nature2 = require('gestire/src/assets/images/nature2.png');
@@ -40,38 +43,10 @@ const HomeScreen = (props) => {
           placeholder="Seacrh 18000+ products"
         />
       </View>
-      <Card elevation={4} style={styles.cardStyle}>
-        <Card.Title title="Your next available slot" />
-        <Card.Content>
-          <View
-            style={{
-              flexDirection: 'row',
-            }}>
-            <FontAwesome name="truck" size={30} />
-            <Text style={styles.textStyle}>
-              STANDARD: Today 12:00PM - 2.00PM
-            </Text>
-          </View>
-        </Card.Content>
-      </Card>
-      <Card
-        style={[styles.cardStyle, {height: 170, marginTop: 12, borderRadius:20}]}
-        elevation={8}
-      >
-        <Card.Cover source = {nature1} style = {{borderRadius: 20}} />
-      </Card>
-      <Card
-        style={[styles.cardStyle, {height: 270, marginTop: 56, borderRadius: 20}]}
-        elevation={1}
-      >
-        <Card.Cover source = {nature2} style = {{borderRadius: 20}}/>
-      </Card>
-      <Card
-        style={[styles.cardStyle, {height: 310, marginTop: 48}]}
-        elevation={1}
-      >
-        <Card.Cover source = {nature3}/>
-      </Card>
+      <FirstCard />
+      <SecondCard />
+      <ThirdCard nature={nature2} />
+      <FourthCard nature={nature3} />
     </View>
   );
 };
